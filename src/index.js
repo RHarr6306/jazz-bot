@@ -11,6 +11,9 @@ require('./modules/functions.js')(client)
 
 client.config = require('./config/config.js')
 client.loader = require('./modules/Loader')
+client.models = {
+    playlists: require('./models/playlists.model')
+}
 
 // database setup
 const mongoose = require('mongoose')
