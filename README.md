@@ -38,6 +38,7 @@ $ yarn install
 4. Insert the following into the `.env`
 ```
 TOKEN=<YOUR_BOT_TOKEN>
+URI=<YOUR_MONGODB_CONNECTING_URI>
 ```
 5. Start your bot:
 ```

@@ -26,6 +26,8 @@
     "eslint": "^7.1.0",
     "fs": "^0.0.1-security",
     "moment": "^2.26.0",
+    "mongodb": "^3.5.8",
+    "mongoose": "^5.9.16",
     "path": "^0.12.7"
   },
   "devDependencies": {
