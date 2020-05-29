@@ -45,6 +45,7 @@ $ yarn start
 ```
 6. Before you commit:
 ```
+$ yarn test
 $ yarn lint
 ```
 
