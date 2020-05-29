@@ -1,0 +1,27 @@
+{
+  "name": "jazz-bot",
+  "version": "1.0.0",
+  "description": "A music bot featuring custom playlists.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dapp3rCraft/jazz-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dapp3rCraft/jazz-bot/issues"
+  },
+  "homepage": "https://github.com/Dapp3rCraft/jazz-bot#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.0.0",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "fs": "^0.0.1-security",
+    "moment": "^2.26.0"
+  }
+}
