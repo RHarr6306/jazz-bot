@@ -17,5 +17,5 @@ TOKEN=<YOUR_BOT_TOKEN>
 ```
 5. Start your bot:
 ```
-yarn start
+$ yarn start
 ```
