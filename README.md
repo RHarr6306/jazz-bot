@@ -22,15 +22,16 @@
 </p>
 
 # Commands
-* None
+* `+ping` - Client ping.
 
 ## Contribute
 1. Clone the repository:
 ```
 $ git clone git@github.com:Dapp3rCraft/jazz-bot.git
 ```
-2. Install the required dependencies:
+2. Install the required dependencies & make sure yarn is installed:
 ```
+$ npm i -g yarn
 $ yarn install
 ```
 3. Create a `.env` file under the project directory.
@@ -41,6 +42,10 @@ TOKEN=<YOUR_BOT_TOKEN>
 5. Start your bot:
 ```
 $ yarn start
+```
+6. Before you commit:
+```
+$ yarn lint
 ```
 
 ## Resources
