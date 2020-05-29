@@ -2,11 +2,11 @@ const { devMode } = require('../config/config')
 
 module.exports = client => {
     setTimeout(client.refreshActivity = () => {
-        const { users, guilds } = client
+        const { users } = client
         client.user.setPresence({
             activity: {
-                name: devMode ? 'In Development' : `${users.cache.size} users, ${guilds.cache.size} servers`,
-                type: devMode ? 'PLAYING' : 'WATCHING'
+                name: devMode ? 'In Development' : `Jazz for ${users.cache.size} users`,
+                type: 'PLAYING'
             },
             status: devMode ? 'dnd' : 'online'
         })
