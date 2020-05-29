@@ -1,4 +1,4 @@
 
 module.exports = async (client, err) => {
-    console.log(err);
+    console.log(err)
 }

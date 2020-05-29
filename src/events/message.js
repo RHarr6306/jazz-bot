@@ -1,5 +1,4 @@
 module.exports = async (client, msg) => {
-
     // Handle command arguments
     const args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g)
     const cmd = args.shift().toLowerCase()
