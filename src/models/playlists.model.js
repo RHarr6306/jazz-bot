@@ -10,14 +10,20 @@ const mongoose = require('mongoose')
             {
                 public: true,
                 name: "my groovy toons",
-                songs: ["link1", "link2"]
+                songs: [
+                    {
+                        name: 'Rick Astley - Never Gonna Give You Up',
+                        length: '3:32',
+                        link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+                    }
+                ]
             }
         ]
     }
 
     +playlist create private "my groovy toons"
     +playlist add link
-    +playlist my groovy toons
+    +playlist view my groovy toons
 
 */
 
