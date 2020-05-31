@@ -49,6 +49,8 @@ $ yarn test
 $ yarn lint
 ```
 
+Read [`CONTRIBUTING.md`](https://github.com/Dapp3rCraft/jazz-bot/blob/master/.github/CONTRIBUTING.md) for more information on contributing.
+
 ## Resources
 * [Discord.js](https://discord.js.org/#/)
 * [Node.js](https://nodejs.org/en/docs/)
