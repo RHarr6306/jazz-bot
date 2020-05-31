@@ -25,31 +25,7 @@
 * `+ping` - Client ping.
 
 ## Contribute
-1. Clone the repository:
-```
-$ git clone git@github.com:Dapp3rCraft/jazz-bot.git
-```
-2. Install the required dependencies & make sure yarn is installed:
-```
-$ npm i -g yarn
-$ yarn install
-```
-3. Create a `.env` file under the project directory.
-4. Insert the following into the `.env`
-```
-TOKEN=<YOUR_BOT_TOKEN>
-```
-5. Start your bot:
-```
-$ yarn start
-```
-6. Before you commit:
-```
-$ yarn test
-$ yarn lint
-```
-
-Read [`CONTRIBUTING.md`](https://github.com/Dapp3rCraft/jazz-bot/blob/master/.github/CONTRIBUTING.md) for more information on contributing.
+Read [`CONTRIBUTING.md`](https://github.com/Dapp3rCraft/jazz-bot/blob/master/.github/CONTRIBUTING.md) for information on contributing.
 
 ## Resources
 * [Discord.js](https://discord.js.org/#/)
