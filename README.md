@@ -14,11 +14,11 @@
   <img src="https://img.shields.io/github/v/release/Dapp3rCraft/jazz-bot?include_prereleases&style=flat-square">
 </p>
 <p align="center">
-  <a href="#commands">Commands</a>
-  <span>-</span>
   <a href="#contribute">Contribute</a>
   <span>-</span>
-  <a href="#contributors">Contributors</a>
+  <a href="https://github.com/Dapp3rCraft/jazz-bot/issues/new">Report a Bug</a>
+  <span>-</span>
+  <a href="https://github.com/Dapp3rCraft/jazz-bot/issues/new">Request a Feature</a>
 </p>
 
 # Commands
