@@ -14,41 +14,18 @@
   <img src="https://img.shields.io/github/v/release/Dapp3rCraft/jazz-bot?include_prereleases&style=flat-square">
 </p>
 <p align="center">
-  <a href="#commands">Commands</a>
-  <span>-</span>
   <a href="#contribute">Contribute</a>
   <span>-</span>
-  <a href="#contributors">Contributors</a>
+  <a href="https://github.com/Dapp3rCraft/jazz-bot/issues/new">Report a Bug</a>
+  <span>-</span>
+  <a href="https://github.com/Dapp3rCraft/jazz-bot/issues/new">Request a Feature</a>
 </p>
 
 # Commands
 * `+ping` - Client ping.
 
 ## Contribute
-1. Clone the repository:
-```
-$ git clone git@github.com:Dapp3rCraft/jazz-bot.git
-```
-2. Install the required dependencies & make sure yarn is installed:
-```
-$ npm i -g yarn
-$ yarn install
-```
-3. Create a `.env` file under the project directory.
-4. Insert the following into the `.env`
-```
-TOKEN=<YOUR_BOT_TOKEN>
-URI=<YOUR_MONGODB_CONNECTING_URI>
-```
-5. Start your bot:
-```
-$ yarn start
-```
-6. Before you commit:
-```
-$ yarn test
-$ yarn lint
-```
+Read [`CONTRIBUTING.md`](https://github.com/Dapp3rCraft/jazz-bot/blob/master/.github/CONTRIBUTING.md) for information on contributing.
 
 ## Resources
 * [Discord.js](https://discord.js.org/#/)
