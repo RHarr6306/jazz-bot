@@ -1,11 +1,11 @@
-const joinChannel = (msg, channel) => {
+const joinChannel = (react, channel) => {
     channel.join()
-    return msg.react('👍')
+    return react('👍')
 }
 
-module.exports = (msg, client, args) => {
-    const channel = msg.member.voice.channel
+module.exports = ({ react, member, reply }, client, args) => {
+    const channel = member.voice.channel
     return (channel)
-        ? joinChannel(msg, channel)
-        : msg.reply('You are not connected to a voice channel!')
+        ? joinChannel(react, channel)
+        : reply('You are not connected to a voice channel!')
 }
