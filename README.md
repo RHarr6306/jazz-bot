@@ -28,7 +28,8 @@
 Read [`CONTRIBUTING.md`](https://github.com/Dapp3rCraft/jazz-bot/blob/master/.github/CONTRIBUTING.md) for information on contributing.
 
 ## Resources
-* [Discord.js](https://discord.js.org/#/)
+* [Discord.js](https://discord.js.org/#/)\
+* [Discord.js Voice](https://discord.js.org/#/docs/main/stable/class/VoiceBroadcast)
 * [Node.js](https://nodejs.org/en/docs/)
 
 ### Prerequisites
