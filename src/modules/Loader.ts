@@ -30,7 +30,7 @@ exports.registerCommands = async (client) => {
 }
 
 exports.registerEvents = async (client) => {
-    const eventFiles = await readdir('./src/events/')
+    const eventFiles = await readdir('./dist/events/')
     client.logger.log(`Loading ${eventFiles.length} events`)
 
     const registeredEvents = []

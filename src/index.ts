@@ -16,8 +16,6 @@ client.models = {
 }
 
 // database setup
-const mongoose = require('mongoose')
-const mongodb = require('mongodb')
 const uri = process.env.URI
 const uriParams = {
     useNewUrlParser: true,
@@ -25,6 +23,8 @@ const uriParams = {
 }
 
 const initDB = () => {
+    const mongoose = require('mongoose')
+    const mongodb = require('mongodb')
     mongodb.connect(uri, uriParams, err => {
         client.logger.log(
             err ? 'Error connecting to the database.' : 'Connected to database.',
