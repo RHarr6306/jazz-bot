@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import * as mongoose from 'mongoose'
 
 const playlistSchema = new mongoose.Schema({
     username: {
@@ -16,4 +16,4 @@ const playlistSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Playlists', playlistSchema)
+export default mongoose.model('Playlists', playlistSchema)

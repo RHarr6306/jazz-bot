@@ -1,19 +1,19 @@
-const field = require('../utils/field')
+import { addTitle, addDescription, addCommand } from '../utils/field'
 
 test('adds title field', () => {
-    expect(field.addTitle({
+    expect(addTitle({
         title: 'description'
     })).toBe('**title** - description')
 })
 
 test('adds description field', () => {
-    expect(field.addDescription({
+    expect(addDescription({
         description: 'description'
     })).toBe('description')
 })
 
 test('adds command field', () => {
-    expect(field.addCommand({
+    expect(addCommand({
         name: '- description'
     })).toBe('`$name` - description')
 })

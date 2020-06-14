@@ -1,11 +1,19 @@
-module.exports = {
-    colors: {
-        red: 0xE84444,
-        yellow: 0xF09F19,
-        green: 0x40AC7B
-    },
-    version: '0.0.0',
-    prefix: '+',
-    devMode: false,
-    logEnabled: true
+
+const colors: any = {
+    red: 0xE84444,
+    yellow: 0xF09F19,
+    green: 0x40AC7B
+}
+
+const version: string = '0.0.0'
+const prefix: string = '+'
+const devMode: boolean = false
+const logEnabled: boolean = true
+
+export { 
+    colors, 
+    version, 
+    prefix, 
+    devMode, 
+    logEnabled 
 }

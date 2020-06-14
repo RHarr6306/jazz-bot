@@ -3,7 +3,7 @@ const joinChannel = (react, channel) => {
     return react('👍')
 }
 
-module.exports = ({ react, member, reply }, client, args) => {
+export default ({ react, member, reply }, client, args) => {
     const channel = member.voice.channel
     return (channel)
         ? joinChannel(react, channel)

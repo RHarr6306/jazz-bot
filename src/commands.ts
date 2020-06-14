@@ -1,4 +1,4 @@
-const path = require('path')
+import * as path from 'path'
 
 module.exports = {
     run: async (cmd: string, msg, client, args) => {

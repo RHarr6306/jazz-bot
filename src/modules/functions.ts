@@ -1,6 +1,6 @@
-const { devMode } = require('../config/config')
+import { devMode } from '../config/config'
 
-module.exports = client => {
+export default client => {
     setTimeout(client.refreshActivity = () => {
         const { users } = client
         client.user.setPresence({

@@ -1,8 +1,8 @@
-const { MessageEmbed } = require('discord.js')
-const { colors, version } = require('../config/config')
+import { MessageEmbed } from 'discord.js'
+import { colors, version } from '../config/config'
 
-let description = 'Missing arguments: `+playlist <create|view|add>`'
-let statusColor = colors.red
+let description: string = 'Missing arguments: `+playlist <create|view|add>`'
+let statusColor: any = colors.red
 
 const addSongDesc = (songs: any[]) => {
     songs.forEach(({ name, length, link }, i) => {

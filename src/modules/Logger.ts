@@ -1,7 +1,7 @@
-const chalk = require('chalk')
-const moment = require('moment')
+import * as chalk from 'chalk'
+import * as moment from 'moment'
 
-exports.log = (content: string, type:string='log') => {
+const log = (content: string, type:string='log') => {
     const timestamp = `[${moment().format('YYYY-MM-DD HH:mm:ss')}]`
     const format = `${timestamp} [${type.toUpperCase()}]: ${content}`
     switch (type) {
@@ -13,7 +13,9 @@ exports.log = (content: string, type:string='log') => {
     }
 }
 
-exports.error = (...args) => this.log(...args, 'error')
-exports.warn = (...args) => this.log(...args, 'warn')
-exports.cmd = (...args) => this.log(...args, 'cmd')
-exports.ready = (...args) => this.log(...args, 'ready')
+const error = (...args) => this.log(...args, 'error')
+const warn = (...args) => this.log(...args, 'warn')
+const cmd = (...args) => this.log(...args, 'cmd')
+const ready = (...args) => this.log(...args, 'ready')
+
+export { log, error, warn, cmd, ready }
