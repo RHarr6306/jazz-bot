@@ -23,7 +23,19 @@ const updatePlaylist = async (msg, client, args) => {
     return description = 'Coming soon.'
 }
 
+// Check if playlist name exists
+const findPlaylist = ({ playlists }, playlistName) => {
+    const songsList = playlists.filter(playlist => playlist.name === playlistName)
+    if (!songsList.length) {
+        statusColor = colors.red
+        description = 'Playlist not found.'
+    }
+
+    return songsList
+}
+
 const fetchPlaylist = async (msg, client, args) => {
+    // Check if playlist name is defined
     args.shift()
     if (!args.length) return description = 'Not found: `+playlist view <name>`'
 
@@ -39,19 +51,15 @@ const fetchPlaylist = async (msg, client, args) => {
     })
     if (!collection) return description = 'You have no playlists!'
 
-    const { playlists } = collection
-    const songsList = playlists.filter(playlist => playlist.name === playlistName)
-    if (!songsList.length) {
-        statusColor = colors.red
-        return description = 'Playlist not found.'
-    }
+    const songsList = findPlaylist(collection, playlistName)
+    if (!songsList) return
 
-    const songs = songsList[0].songs
+    const { songs } = songsList[0]
+    description = songs ? '' : 'This playlist is empty!'
     if (songs) {
-        description = ''
         statusColor = colors.green
         return addSongDesc(songs)
-    } else return description = 'Songs not found.'
+    }
 }
 
 module.exports = async (msg, client, args) => {
