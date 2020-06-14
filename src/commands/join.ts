@@ -4,7 +4,7 @@ const joinChannel = (react, channel) => {
 }
 
 export default ({ react, member, reply }, client, args) => {
-    const channel = member.voice.channel
+    const channel: any = member.voice.channel
     return (channel)
         ? joinChannel(react, channel)
         : reply('You are not connected to a voice channel!')

@@ -2,7 +2,7 @@ import { promisify } from 'util'
 const readdir = promisify(require('fs').readdir)
 
 const registerModules = async client => {
-    const moduleFiles = await readdir('./src/modules/')
+    const moduleFiles: any = await readdir('./src/modules/')
     moduleFiles.forEach(file => {
         const moduleName = file.split('.')[0]
         if (moduleName[0] === moduleName[0].toLowerCase() || moduleName === 'Loader') { return }
@@ -11,14 +11,14 @@ const registerModules = async client => {
 }
 
 const registerCommands = async client => {
-    const cmdFolders = await readdir('./src/commands/')
+    const cmdFolders: any = await readdir('./src/commands/')
     cmdFolders.forEach(async folder => {
-        const cmdFiles = await readdir('./src/commands/' + folder + '/')
+        const cmdFiles: any = await readdir('./src/commands/' + folder + '/')
         if (cmdFiles.length > 0) client.logger.log(`Loading ${cmdFiles.length} commands from ${folder}`)
-        const registeredCommands = []
+        const registeredCommands: string[] = []
         cmdFiles.forEach(file => {
-            const commandName = file.split('.')[0]
-            const props = require(`../src/commands/${folder}/${file}`)
+            const commandName: string = file.split('.')[0]
+            const props: any = require(`../src/commands/${folder}/${file}`)
             client.commands.set(props.help.name, props)
             props.conf.aliases.forEach(alias => {
                 client.aliases.set(alias, props.help.name)
@@ -30,13 +30,13 @@ const registerCommands = async client => {
 }
 
 const registerEvents = async client => {
-    const eventFiles = await readdir('./dist/events/')
+    const eventFiles: any = await readdir('./dist/events/')
     client.logger.log(`Loading ${eventFiles.length} events`)
 
     const registeredEvents = []
     eventFiles.forEach(file => {
-        const eventName = file.split('.')[0]
-        const evt = require(`../events/${file}`)
+        const eventName: string = file.split('.')[0]
+        const evt: any = require(`../events/${file}`)
         client.on(eventName, evt.bind(null, client))
         registeredEvents.push(eventName)
     })

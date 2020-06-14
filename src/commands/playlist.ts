@@ -6,7 +6,7 @@ let statusColor: any = colors.red
 
 const addSongDesc = (songs: any[]) => {
     songs.forEach(({ name, length, link }, i) => {
-        const songDesc = `${i + 1} - [**${name}**](${link}) - ${length}\n`
+        const songDesc: string = `${i + 1} - [**${name}**](${link}) - ${length}\n`
         if (description.length + songDesc.length < 2000) {
             return description += songDesc
         }
@@ -29,8 +29,8 @@ const fetchPlaylist = async (msg, client, args) => {
 
     statusColor = colors.yellow
     const { models, logger } = client
-    const playlistName = args.join(' ')
-    const collection = await models.playlists.findOne({
+    const playlistName: string = args.join(' ')
+    const collection: any = await models.playlists.findOne({
         id: msg.author.id
     }, err => {
         if (err) {
@@ -40,7 +40,7 @@ const fetchPlaylist = async (msg, client, args) => {
     if (!collection) return description = 'You have no playlists!'
 
     const { playlists } = collection
-    const songsList = playlists.filter(playlist => playlist.name === playlistName)
+    const songsList: any = playlists.filter(playlist => playlist.name === playlistName)
     if (!songsList.length) {
         statusColor = colors.red
         return description = 'Playlist not found.'

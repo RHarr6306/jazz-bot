@@ -1,6 +1,6 @@
 import * as Discord from 'discord.js'
 
-const client = new Discord.Client({
+const client: any = new Discord.Client({
     disableEveryone: true,
     fetchAllMembers: true,
     sync: true
@@ -23,8 +23,8 @@ const uriParams = {
 }
 
 const initDB = () => {
-    const mongoose = require('mongoose')
-    const mongodb = require('mongodb')
+    const mongoose: any = require('mongoose')
+    const mongodb: any = require('mongodb')
     mongodb.connect(uri, uriParams, err => {
         client.logger.log(
             err ? 'Error connecting to the database.' : 'Connected to database.',
@@ -40,11 +40,16 @@ const initDB = () => {
 }
 
 const init = async () => {
+    const {
+        registerModules,
+        registerEvents,
+        checkDiscordStatus
+    } = client.loader
+    
     console.clear()
-    const loader = client.loader
-    await loader.registerModules(client)
-    await loader.registerEvents(client)
-    await loader.checkDiscordStatus(client)
+    await registerModules(client)
+    await registerEvents(client)
+    await checkDiscordStatus(client)
     await client.login(process.env.TOKEN)
     initDB()
 }

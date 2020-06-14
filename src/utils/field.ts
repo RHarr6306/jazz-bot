@@ -1,7 +1,7 @@
 const replaceCommas = (str: string[]) => `${str}`.replace(/,/g, '\n')
 
 const addTitle = (info: {}) => {
-    const description = Object.entries(info).map(desc => {
+    const description: string[]  = Object.entries(info).map(desc => {
         return `**${desc[0]}** - ${desc[1]}`
     })
 
@@ -9,7 +9,7 @@ const addTitle = (info: {}) => {
 }
 
 const addDescription = (info: {}) => {
-    const description = Object.entries(info).map(desc => {
+    const description: string[] = Object.entries(info).map(desc => {
         return `${desc[1]}`
     })
 
@@ -17,7 +17,7 @@ const addDescription = (info: {}) => {
 }
 
 const addCommand = (info: {}) => {
-    const description = Object.entries(info).map(desc => {
+    const description: string[]  = Object.entries(info).map(desc => {
         return `\`$${desc[0]}\` ${desc[1]}`
     })
 

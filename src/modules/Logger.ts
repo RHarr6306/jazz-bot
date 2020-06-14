@@ -2,8 +2,8 @@ import * as chalk from 'chalk'
 import * as moment from 'moment'
 
 const log = (content: string, type:string='log') => {
-    const timestamp = `[${moment().format('YYYY-MM-DD HH:mm:ss')}]`
-    const format = `${timestamp} [${type.toUpperCase()}]: ${content}`
+    const timestamp: string = `[${moment().format('YYYY-MM-DD HH:mm:ss')}]`
+    const format: string = `${timestamp} [${type.toUpperCase()}]: ${content}`
     switch (type) {
         case 'log': return console.log(chalk.white(format))
         case 'warn': return console.log(chalk.rgb(255, 150, 150)(format))

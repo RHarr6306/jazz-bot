@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose'
 
-const playlistSchema = new mongoose.Schema({
+const playlistSchema: any = new mongoose.Schema({
     username: {
         type: String,
         required: true

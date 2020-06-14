@@ -1,7 +1,7 @@
 export default async (client, msg) => {
     // Handle command arguments
-    const args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g)
-    const cmd = args.shift().toLowerCase()
+    const args: string[] = msg.content.slice(client.config.prefix.length).trim().split(/ +/g)
+    const cmd: string = args.shift().toLowerCase()
 
     if (msg.author.bot) return
 
