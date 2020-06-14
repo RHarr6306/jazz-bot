@@ -1,7 +1,7 @@
 const { promisify } = require('util')
 const readdir = promisify(require('fs').readdir)
 
-exports.registerModules = async (client) => {
+exports.registerModules = async client => {
     const moduleFiles = await readdir('./src/modules/')
     moduleFiles.forEach(file => {
         const moduleName = file.split('.')[0]
@@ -10,7 +10,7 @@ exports.registerModules = async (client) => {
     })
 }
 
-exports.registerCommands = async (client) => {
+exports.registerCommands = async client => {
     const cmdFolders = await readdir('./src/commands/')
     cmdFolders.forEach(async folder => {
         const cmdFiles = await readdir('./src/commands/' + folder + '/')
@@ -29,7 +29,7 @@ exports.registerCommands = async (client) => {
     })
 }
 
-exports.registerEvents = async (client) => {
+exports.registerEvents = async client => {
     const eventFiles = await readdir('./dist/events/')
     client.logger.log(`Loading ${eventFiles.length} events`)
 
@@ -43,7 +43,7 @@ exports.registerEvents = async (client) => {
     client.logger.log(`Loaded: [${registeredEvents.join(' ')}]`)
 }
 
-exports.checkDiscordStatus = (client) => {
+exports.checkDiscordStatus = client => {
     require('axios').get('https://srhpyqt94yxb.statuspage.io/api/v2/status.json')
         .then(({ data }) => client.logger.log(`Discord API Status: ${data.status.description}`))
 }

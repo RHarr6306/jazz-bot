@@ -1,7 +1,7 @@
 const chalk = require('chalk')
 const moment = require('moment')
 
-exports.log = (content, type = 'log') => {
+exports.log = (content: string, type:string='log') => {
     const timestamp = `[${moment().format('YYYY-MM-DD HH:mm:ss')}]`
     const format = `${timestamp} [${type.toUpperCase()}]: ${content}`
     switch (type) {

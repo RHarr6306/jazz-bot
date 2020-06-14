@@ -4,7 +4,7 @@ const { colors, version } = require('../config/config')
 let description = 'Missing arguments: `+playlist <create|view|add>`'
 let statusColor = colors.red
 
-const addSongDesc = songs => {
+const addSongDesc = (songs: any[]) => {
     songs.forEach(({ name, length, link }, i) => {
         const songDesc = `${i + 1} - [**${name}**](${link}) - ${length}\n`
         if (description.length + songDesc.length < 2000) {
