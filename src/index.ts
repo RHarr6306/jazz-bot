@@ -1,4 +1,4 @@
-import * as Discord from 'discord.js'
+const Discord: any = require('discord.js')
 
 const client: any = new Discord.Client({
     disableEveryone: true,
@@ -6,8 +6,11 @@ const client: any = new Discord.Client({
     sync: true
 })
 
-require('dotenv').config()
-require('./modules/functions.js')(client)
+import functions from './modules/functions'
+import * as dotenv from 'dotenv'
+
+functions(client)
+dotenv.config()
 
 client.config = require('./config/config.js')
 client.loader = require('./modules/Loader')
